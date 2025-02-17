@@ -1,0 +1,10 @@
+import string
+import secrets
+
+characters = string.ascii_letters + string.digits + string.punctuation
+password = ""
+pwd = int(input("How long do you want your password to be? "))
+
+for i in range(pwd):
+    password += "".join(secrets.choice(characters))
+print(password)
